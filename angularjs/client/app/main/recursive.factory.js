@@ -1,8 +1,7 @@
-angular.module('dashboardApp')
+angular.module('calculatorApp')
     .factory('recursive', function(operations) {
         const availableOperations = operations;  
-        // Base case
-        //  [1] --> No more items to pop.
+   
         const performRecursiveOperation = ( argument, operation ) => {
           if(argument.length==1)
             return argument 

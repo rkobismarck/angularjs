@@ -51,8 +51,15 @@ body{
     color: red;
 }
 
-.borderless{
-    border-left: 0;
-    border-right: 0;
-    border-bottom: 0;
+.panel-heading--harmonized{
+    background-color: rgb(68,148,184) !important;
+    color: white !important;
+    font-family: 'Roboto' !important;
+    letter-spacing: 1px;
+}
+
+.btn-calculate{
+    background-color: rgb(134,203,55)!important;
+    color: white !important; 
+    font-family: 'Roboto' !important;
 }

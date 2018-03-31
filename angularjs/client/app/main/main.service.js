@@ -1,7 +1,14 @@
-angular.module('dashboardApp')
+angular.module('calculatorApp')
     .service('mainService', function(recursive) {
 
-    const reverseString = (argument) => recursive.summarize(argument);
+    const calculate = (operator, argument) => {
+      if(operator === "add"){
+        return recursive.summarize(argument)
+      }
+      if(operator === "multiply"){
+        return recursive.multiplier(argument)
+      }
+    }
 
-    return {reverseString};
+    return {calculate};
   });

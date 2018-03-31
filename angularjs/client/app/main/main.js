@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dashboardApp')
+angular.module('calculatorApp')
   
 
   .config(function ($routeProvider) {
@@ -8,10 +8,6 @@ angular.module('dashboardApp')
       .when('/', {
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/login',{
-        templateUrl: 'app/login/login.html',
-        controller: 'LoginCtrl'
       })
     });
 

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('dashboardApp', [
+angular.module('calculatorApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
