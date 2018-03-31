@@ -1,14 +1,13 @@
 'use strict';
 
-angular.module('dashboardApp')
+angular.module('calculatorApp')
   .controller('MainCtrl', function ($scope, $http, mainService) {
 
-    $scope.operation = {type: undefined}
-    $scope.argumentOperation = "";
-    $scope.resultOperation = {isValid:undefined,value:undefined};
+    $scope.operation          = {type: undefined}
+    $scope.argumentOperation  = "";
+    $scope.resultOperation    = {isValid:undefined,value:undefined};
     
     $scope.validateSelectedOperation = function(argument){
-      console.log(typeof argument)  
       if(typeof argument == "undefined"){
           $scope.resultOperation.value = "Please, select an operation";
           $scope.resultOperation.isValid = false;
@@ -20,8 +19,10 @@ angular.module('dashboardApp')
 
     $scope.performCalculation = function(){
       if($scope.validateSelectedOperation($scope.operation.type)){
-          let operators = $scope.argumentOperation.split(",");
-          $scope.resultOperation.value = mainService.reverseString(operators);
+          let operands = $scope.argumentOperation.split(",");
+          let operator = $scope.operation.type;
+          console.log(operator)
+          $scope.resultOperation.value = mainService.calculate(operator,operands);
           $scope.resultOperation.isValid = true;
       }
     }

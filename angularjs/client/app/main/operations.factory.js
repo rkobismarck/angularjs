@@ -1,4 +1,4 @@
-angular.module('dashboardApp')
+angular.module('calculatorApp')
     .factory('operations', function() {
 
         const add      = (a,b) => (parseInt(a) + parseInt(b))
